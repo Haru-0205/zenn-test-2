@@ -34,6 +34,7 @@
 	    pkgs.ffmpeg
 	    pkgs.git
       pkgs.deno
+      pkgs.lilypond
 	  ];
 	};
       });
