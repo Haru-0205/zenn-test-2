@@ -33,6 +33,7 @@
 	    pkgs.fluidsynth
 	    pkgs.ffmpeg
 	    pkgs.git
+      pkgs.deno
 	  ];
 	};
       });
