@@ -1,0 +1,35 @@
+\documentclass{ltjsarticle}
+
+\usepackage{graphics}
+\begin{document}
+
+\title{LilyPond-Bookによる楽典資料生成試験}
+\author{haru}
+\maketitle
+
+\tableofcontents
+\clearpage
+
+\section{音符の種類}
+
+音符にはその長さ(「音価」という)によって複数の種類が存在する。\\
+
+{%
+\parindent 0pt
+\noindent
+\ifx\preLilyPondExample \undefined
+\else
+  \expandafter\preLilyPondExample
+\fi
+\def\lilypondbook{}%
+\input{16/lily-7e667693-systems.tex}%
+\ifx\postLilyPondExample \undefined
+\else
+  \expandafter\postLilyPondExample
+\fi
+}
+
+上記の譜面は、譜面上の「ソ」の位置に音符をプロットした例である。 \\
+左から順に、全音符、二分音符、四分音符、八分音符、十六分音符、三十二分音符である。
+
+\end{document}

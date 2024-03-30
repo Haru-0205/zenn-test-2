@@ -1,0 +1,29 @@
+\documentclass[a4paper]{article}
+
+\begin{document}
+
+\verb+lilypond-book+ のドキュメントでは自由に楽譜とテキストを
+組み合わせることができます。
+例えば、以下のように:
+
+\begin{lilypond}
+\relative {
+  c'2 e2 \tuplet 3/2 { f8 a b } a2 e4
+}
+\end{lilypond}
+
+オプションは角括弧の中に配置します。
+
+\begin{lilypond}[fragment,quote,staffsize=26,verbatim]
+  c'4 f16
+\end{lilypond}
+
+大きな楽譜例は別のファイルに配置して、\verb+\lilypondfile+ で
+インポートすることができます。
+
+\lilypondfile[quote,noindent]{screech-and-boink.ly}
+
+(必要があれば、@file{screech-and-boink.ly} をこのファイルと同じディレクトリ
+にある任意の @file{.ly} に置き換えてください。)
+
+\end{document}
