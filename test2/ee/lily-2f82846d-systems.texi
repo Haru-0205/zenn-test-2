@@ -1,0 +1,2 @@
+@image{/mnt/c/Users/haru/working/zenn-test-2/test2/ee/lily-2f82846d-1}
+@c eof

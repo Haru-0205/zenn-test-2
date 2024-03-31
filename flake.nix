@@ -3,15 +3,14 @@
 
   inputs = {
     nixpkgs = { url = "github:NixOS/nixpkgs/nixpkgs-unstable"; };
+    flake-utils = { url = "github:numtide/flake-utils"; };
   };
 
-  outputs = { self, nixpkgs }:
+  outputs = { self, nixpkgs,flake-utils }:
+  flake-utils.lib.eachDefaultSystem (system:
       let
         inherit (nixpkgs.lib) optional;
         pkgs = import nixpkgs { inherit system; };
-        tex = (pkgs.texlive.combine {
-          inherit (pkgs.texlive) scheme-full;
-          });
       in
        {
         devShell = pkgs.mkShell {
@@ -34,7 +33,7 @@
         pkgs.noto-fonts-extra
         pkgs.noto-fonts-cjk
         pkgs.noto-fonts-emoji
-        tex
+	pkgs.texliveFull
         ];
       };
     });

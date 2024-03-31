@@ -6,6 +6,8 @@
 \date{2024年4月1日}
 \maketitle
 
+\tableofcontents
+
 \section{調}
 \subsection{調とは}
 
@@ -36,7 +38,7 @@
         \clef treble
         \key f \major
         
-        f8 g a bes c d e f
+        f'8 g a bes c d e f
     }
 }
 \end{lilypond}
@@ -53,14 +55,14 @@
 \relative {
     {
         \clef treble
-        \key a \miner
+        \key a \minor
 
-        a8 b c d e f g a
+        a'8 b c d e f g a
     }
 }
 \end{lilypond}
 
-これはイ短調(A-moll, A miner)である。  
+これはイ短調(A-moll, A minor)である。  
 ハ長調とスタートとする音こそ異なるものの構成音が同じである。  
 これらの調の関係を「平行調」という。  
 
@@ -72,9 +74,9 @@
 \relative {
     {
         \clef treble
-        \key a \miner
+        \key a \minor
 
-        a8 b c d e f gis a
+        a'8 b c d e f gis a
     }
 }
 \end{lilypond}
@@ -87,9 +89,9 @@
 \relative{
     {
         \clef treble
-        \key a \miner
+        \key a \minor
 
-        a8 b c d e fis gis a a g f e d c b a
+        a'8 b c d e fis gis a a g f e d c b a
     }
 }
 \end{lilypond}
